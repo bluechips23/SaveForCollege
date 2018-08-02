@@ -135,13 +135,16 @@ li.resourceList {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: all 1s ease-in-out;
+  -webkit-transform: all 1s ease-in-out;
   width: 100%;
 }
 .card:hover {
   transform: rotateY(180deg);
 }
 .card .side {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 6px;
   height: 100%;
@@ -152,6 +155,7 @@ li.resourceList {
 .card .back {
   height: 280px;
   text-align: center;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
