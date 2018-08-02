@@ -1,0 +1,218 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Lobster');
+
+* {box-sizing: border-box}
+
+body {
+  background-color: #00738e;
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+.goal {
+  margin-top: 20px;
+  font-family: 'Lobster','Source Sans Pro', serif;
+  font-size: 36px;
+  padding-bottom: 10px; 
+}
+
+.refresh img {
+  width: 35px;
+  height: 35px;
+}
+
+.refresh {
+  margin-top: -45px;
+  margin-left: 430px;
+  visibility:hidden;
+  position: relative;
+  width: 35px;
+  padding-left: 5px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.refresh:hover .tooltiptext {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.bodyContainer {
+   width: 100%;
+   margin: 0 auto;
+   padding-left: 5%;
+}
+
+.blurify {
+  -webkit-filter: blur(2px) grayscale(100%);
+  -moz-filter: blur(2px) grayscale(100%);
+  -o-filter: blur(2px) grayscale(100%);
+  -ms-filter: blur(2px) grayscale(100%);
+  filter: blur(2px) grayscale(100%);
+}
+
+.title {
+  font-family: 'Lobster','Source Sans Pro', serif;
+  width: 100%;
+  padding-left: 40%;
+  font-size: 60px;
+  margin: 0 auto;
+}
+
+.resourcesTitle {
+  font-family: 'Lobster','Source Sans Pro', serif;
+  margin: 0 auto;
+  margin-top: 5px;
+  font-size: 36px;
+}
+
+.resources {
+  margin: 0 auto;
+  font-size: 24px;
+  color: #f5f5f5;
+  padding-bottom: 50px;
+}
+
+a.resourceLinks {
+  color: #0978b9;
+  text-decoration: none;
+}
+
+a.resourceLinks:hover {
+  color: #03aeed;
+}
+
+li.resourceList {
+  padding-top: 20px;
+  list-style-type: none;
+}
+
+.columnTwo {
+  right: 50px;
+  position: inherit;
+}
+
+.columnTitle {
+  margin-top: 0px;
+  font-family: 'Lobster','Source Sans Pro', serif;
+  font-size: 36px;
+}
+
+.two {
+  margin-top: 15px;
+}
+
+.card-container {
+  margin-top: 5px;
+  cursor: pointer;
+  height: 280px;
+  perspective: 600;
+  position: relative;
+  width: 280px;
+  background-color: rgba(0,0,0,0);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  height: 280px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.cardTitle {
+  font-family: 'Lobster','Source Sans Pro', serif;
+  padding-top: 10px;
+  font-size: 30px;
+  color: #00738e;
+}
+
+.cardText {
+  padding: 15px;
+  text-align: left;
+}
+
+.cardImg {
+  width: 300px;
+  height: 300px;
+}
+
+.clickMe {
+  width: 80%;
+  padding: 5px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  background-color: #00738e;
+  color: #fff;
+}
+
+.clickMe:hover {
+  background-color: #00a386;
+}
+
+.dontClickMe {
+  pointer-events: none;
+  background-color: #848484;
+  cursor:default;
+}
+
+#myProgress {
+  width: 92%;
+  background-color: #fffcee;
+  border-radius: 20px;
+}
+
+#myBar {
+  width: 0%;
+  height: 35px;
+  transition: all 1s ease-in-out;
+  /*background-color: #4CAF50;*/
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+#progressText {
+  background-image: url("images/cashicon.png");
+  background-size: 35px;
+  background-position: left;
+  background-repeat: no-repeat;
+  color: black;
+  margin-top: -30px;
+  margin-left: 1%;
+  padding-left: 40px;
+  transition: all 1s ease-in-out;
+}

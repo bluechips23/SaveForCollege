@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Save for College</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   
+    <div class='title'>Save for College</div>
+    <div class='bodyContainer'>
+        <div class="goal">Goal: Save $10,000 for college</div>
+        <div class="refresh" id="refresh">
+          <span class="tooltiptext">Reset Goal</span>
+          <img src="images/refresh.png" alt="Reset Goal" onclick="refreshPage()">
+        </div>
+        <div id="myProgress">
+          <div id="myBar"></div>
+        </div>
+        <div id="progressText">$0</div>
+
+        
+        <br>
+
+        <table style="width:100%">
+          <!-- Column One -->
+          <tr>
+            <div class="columnTitle">Savings</div>
+            
+            <!-- College Savings Account -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/savings.jpg" alt="College Savings Account"></div>
+                  <div class="side back">
+                    <div class="cardTitle">Savings Account</div>
+                    <div class="cardText">A savings account is a great place to keep cash that you don’t plan to spend immediately. These accounts keep your money safe while paying you interest.</div>
+                    <span class="savingsOption">
+                      <div class="clickMe" onclick="move(10)">Short Term Savings</div>
+                      <div class="clickMe" onclick="move(25)">Long Term Savings</div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            
+            <!-- Stocks and Investment -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/stock.png" alt="Stock Market"></div>
+                  <div class="side back">
+                    <div class="cardTitle">Stock Market</div>
+                    <div class="cardText">The stock market is where stocks are "traded" – meaning bought and sold. The goal is to buy the stock, hold it for a time, and then sell the stock for more than you paid for it.</div>
+                    <div class="clickMe" onclick="move(25)">Invest in Stocks</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            
+
+            <!-- Summer Job -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/summerjob.png" alt="Summer Jobs"></div>
+                  <div class="side back">
+                    <div class="cardTitle">Summer Jobs</div>
+                    <div class="cardText">Summer jobs are a great way to build your resume and earn some extra money! Many job options are available such as at amusement and water parks, restaurants and summer camps.</div>
+                    <div class="clickMe" onclick="move(25)">Save from a summer job</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            
+
+            <!-- Scholarships & Financial Aid -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/finaid.jpeg" alt="Scholarships"></div>
+                  <div class="side back">
+                    <div class="cardTitle">Scholarships</div>
+                    <div class="cardText">Scholarships are forms of aid that help students pay for their education. Unlike student loans, scholarships and grants do not have to be repaid. Scholarships come in all shapes and sizes</div>
+                    <div class="clickMe scholarships" onclick="move(25)">Apply for Scholarships</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="columnTitle two">Spendings</div>
+            </td>
+          </tr>
+          
+          <!-- Column three -->
+          <tr >
+              <!-- Shopping -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/shopping.png" alt="Shopping"></div>
+                  <div class="side back">
+                    <div class="cardTitle">Shop Smart</div>
+                    <div class="cardText">Don't shop as entertainment. For gifts, shop in advance instead of the last minute. Shop outlet stores and discount stores. They offer good deals on popular designer names.</div>
+                    <div class="clickMe" onclick="move(-10)">Go on a Shopping Spree</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            
+
+            <!-- Latte Effect -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/latte.jpeg" alt="The latte effect"></div>
+                  <div class="side back">
+                    <div class="cardTitle">The 'Latte' Effect</div>
+                    <div class="cardText">
+                      The "Latte Factor" is a popular money-saving strategy to save money by cutting down on small things—like daily lattes. Saving $5 a day adds up in the long run.
+                    </div>
+                    <div class="clickMe" onclick="move(-2)">Buy a Latte Every Morning</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            
+
+            <!-- Toys -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/toys.jpg" alt="Toys"></div>
+                  <div class="side back">
+                    <div class="cardTitle">New Gadgets</div>
+                    <div class="cardText">Looking for a digital camera or a new tablet? You can compare prices online before you visit a store. Collecting information makes you a smart shopper and can save you money!</div>
+                    <div class="clickMe" onclick="move(-3)">Buy the Newest Gadget</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            
+
+            <!-- xbox -->
+            <td>
+              <div class="card-container">
+                <div class="card">
+                  <div class="side"><img class="cardImg" src="images/entertainment.png" alt="Xbox"></div>
+                  <div class="side back">
+                    <div class="cardTitle">Impulse Shopping</div>
+                    <div class="cardText">Spending comes easy to all of us. Resist impulse buying. Good spenders are careful with money and make smart decisions. They can make the money they have go farther.</div>
+                    <div class="clickMe" onclick="move(-3)">Buy New XBox</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+    
+      <br/>
+      
+      <div class="resourcesTitle">Resources</div>
+      <div class="resources">
+        <li class="resourceList"><a class="resourceLinks" href="https://www.thebalance.com/types-of-savings-accounts-315775" target="_blank">Types of Savings Accounts</a>
+        </li>
+        
+        <li class="resourceList">
+          <a class="resourceLinks" href="http://www.themint.org/teens/what-is-the-stock-market.html" target="_blank">What is a Stock Market?</a>
+        </li>
+        
+        <li class="resourceList">
+          <a class="resourceLinks" href="https://www.thebalancecareers.com/list-of-summer-job-options-for-teenagers-2063845" target="_blank">Summer Job Options for Teens</a>
+        </li>
+        
+        <li class="resourceList">
+          <a class="resourceLinks" href="http://finaid.org/scholarships/" target="_blank">Scholarship Fundamentals</a>
+        </li>
+        
+        <li class="resourceList">
+          <a class="resourceLinks" href="http://www.themint.org/kids/smart-shopping.html" target="_blank">How to Shop Smart</a>
+        </li>
+        
+        <li class="resourceList">
+          <a class="resourceLinks" href="http://www.themint.org/teens/take-the-spending-challenge.html" target="_blank">The Spending Challenge!</a>
+        </li>
+      
+      </div>
+    
+    </div>
+    
+  </body>
+</html>
